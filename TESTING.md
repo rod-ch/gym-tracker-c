@@ -2,7 +2,7 @@
 
 ## Resultado general
 
-Se ejecutaron 21 tests automatizados sobre la aplicación.
+Se ejecutaron **21 tests automatizados** sobre la aplicación.
 
 Resultado:
 
@@ -10,80 +10,101 @@ Resultado:
 Ran 21 tests
 
 OK
+```
 
 Esto indica que la aplicación compila correctamente, se ejecuta sin errores en los casos testeados y las funciones principales responden como se espera.
 
-Áreas testeadas
-1. Menú principal
+## Áreas testeadas
+
+### 1. Menú principal
 
 Se verificó que el menú permita salir correctamente y rechace opciones inválidas.
 
-2. Cálculo de volumen
+### 2. Cálculo de volumen
 
-Se testeó la fórmula:
+Se testeó la fórmula principal del programa:
 
+```text
 volumen = series * repeticiones * peso
+```
 
-También se validaron entradas incorrectas como series en cero, repeticiones en cero y peso negativo.
+También se validaron entradas incorrectas, como:
 
-3. Múltiples ejercicios
+- series en cero;
+- repeticiones en cero;
+- peso negativo.
 
-Se verificó que el programa permita ingresar varios ejercicios, calcular el volumen individual y sumar el volumen total.
+### 3. Cálculo de volumen de múltiples ejercicios
 
-4. Ejercicios con ID centinela
+Se verificó que el programa permita ingresar varios ejercicios, calcular el volumen individual de cada uno y sumar el volumen total acumulado.
 
-Se testeó que el programa finalice correctamente cuando el usuario ingresa ID igual a 0.
+### 4. Ejercicios con ID centinela
 
-5. Promedio de pesos
+Se verificó que el programa finalice correctamente cuando el usuario ingresa un ID igual a `0`.
 
-Se verificó la carga de pesos, el ordenamiento y el cálculo del promedio.
+### 5. Promedio de pesos
 
-6. Peso máximo y mínimo
+Se verificó que el programa pueda:
 
-Se testeó la detección del peso máximo, mínimo y sus posiciones.
+- cargar una lista de pesos;
+- ordenar los valores;
+- calcular el promedio.
 
-7. Búsqueda de peso
+### 6. Peso máximo y mínimo
 
-Se verificó la búsqueda de un peso dentro de una lista ordenada.
+Se testeó que el programa identifique correctamente:
 
-8. Registro de nombres y pesos
+- el peso máximo;
+- el peso mínimo;
+- la posición donde aparece cada valor.
+
+### 7. Búsqueda de peso
+
+Se verificó que el programa pueda buscar un peso específico dentro de una lista ordenada.
+
+### 8. Registro de nombres y pesos
 
 Se testeó el registro de ejercicios con nombre y peso utilizado.
 
-9. Escritura en CSV
+### 9. Escritura en archivo CSV
 
-Se verificó que el programa cree el archivo CSV, escriba encabezado y guarde ejercicios con ID, fecha, sets, reps, peso y volumen.
+Se verificó que el programa pueda:
 
-10. Lectura de CSV
+- crear el archivo CSV si no existe;
+- escribir el encabezado;
+- guardar ejercicios con ID, fecha, nombre, sets, reps, peso y volumen;
+- calcular y guardar el volumen total.
 
-Se verificó que el programa lea el archivo CSV e imprima el contenido en consola.
+### 10. Lectura de archivo CSV
 
-11. Funciones auxiliares
+Se verificó que el programa pueda leer el archivo CSV e imprimir su contenido en consola.
 
-Se probaron funciones internas como:
+### 11. Funciones auxiliares internas
 
-swap
-quick_sort
-binary_search
-obtener_ultimo_id
-volumen
-Conclusión
+También se probaron funciones internas mediante un programa auxiliar en C.
 
-Los tests validan los comportamientos principales del programa: cálculo de volumen, manejo de múltiples ejercicios, validación de entradas, ordenamiento, búsqueda, escritura y lectura de archivos CSV.
+Funciones testeadas:
 
+- `swap`
+- `quick_sort`
+- `binary_search`
+- `obtener_ultimo_id`
+- `volumen`
 
----
+## Conclusión
 
-### 7. Archivo de ejemplo CSV
+Los tests validan los comportamientos principales del programa:
 
-No subas tu `gym.csv` real si es generado. Mejor creá:
+- menú interactivo;
+- cálculo de volumen;
+- manejo de múltiples ejercicios;
+- validación de entradas;
+- ordenamiento de pesos;
+- búsqueda binaria;
+- cálculo de promedio;
+- detección de máximo y mínimo;
+- registro de ejercicios;
+- escritura y lectura de archivos CSV;
+- funciones auxiliares internas.
 
-```text
-examples/gym_sample.csv
-
-Contenido:
-
-id,fecha,ejercicio,sets,reps,peso,volumen
-1,30/05/2026,Bench Press,3,10,60.00,1800.00
-2,30/05/2026,Squat,4,8,100.00,3200.00
-TOTAL,,,,,,5000.00
+El resultado `OK` indica que todos los tests pasaron exitosamente.
