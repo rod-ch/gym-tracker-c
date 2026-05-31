@@ -1,0 +1,22 @@
+# Compiled files
+*.exe
+*.o
+*.obj
+*.out
+
+# Dev-C++ / IDE files
+*.dev
+*.layout
+Makefile.win
+
+# Runtime/generated files
+gym.csv
+gmon.out
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Editor/system files
+.vscode/
+.DS_Store
